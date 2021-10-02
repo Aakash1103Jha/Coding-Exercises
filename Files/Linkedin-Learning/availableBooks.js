@@ -45,16 +45,36 @@ class Book {
 }
 
 const book = new Book("Harry Potter", "J.K. Rowling", Math.floor(Math.random() * 100000), 20)
+// const isAvailable = book.Availability
+// const onRestock = book.onRestock(5)
+// const onSale = book.onSale()
 
-const isAvailable = book.Availability
-const onRestock = book.onRestock(5)
-const onSale = book.onSale()
+/*
+	--------------------------- Inheritance --------------------------- 
+*/
+class TechnicalBooks extends Book {
+	constructor(title, author, isbn, numCopies, edition) {
+		super(title, author, isbn, numCopies)
+		this.edition = edition
+	}
 
-console.log(book)
+	getEdition() {
+		return `The current version of this book is ${this.edition}`
+	}
+}
+
+const dme = new TechnicalBooks("Design of Machine Elements", "McGrawHill", 234561234567, 8, 3)
+
+const isAvailable = dme.Availability
+const onRestock = dme.onRestock(5)
+const onSale = dme.onSale()
+const edition = dme.getEdition()
+
+console.log(dme)
 
 console.log({
 	isAvailable: isAvailable,
 	onRestock: onRestock,
 	onSale: onSale,
-	onSaleAgain: onSaleAgain,
+	edition: edition,
 })
