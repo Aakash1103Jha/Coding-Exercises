@@ -17,7 +17,7 @@
     "url": "https://github.com/Aakash1103Jha/Coding-Exercises/issues"
   },
   "homepage": "https://github.com/Aakash1103Jha/Coding-Exercises#readme",
-  "dependencies": {
-    "nodemon": "^2.0.12"
+  "devDependencies": {
+    "nodemon": "^2.0.13"
   }
 }
